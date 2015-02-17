@@ -21,4 +21,8 @@ class ApplicationController < ActionController::Base
              status: :unauthenticated
     end
   end
+
+  rescue_from ActiveRecord::RecordNotFound do
+    render json: nil, status: :not_found
+  end
 end
