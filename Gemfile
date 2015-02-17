@@ -49,6 +49,7 @@ group :development, :test do
 end
 
 group :production do
+  gem 'rack-cors' # VERY IMPORTANT FOR FRONTEND SANITY
   gem 'pg'
   gem 'rails_12factor'
 end
